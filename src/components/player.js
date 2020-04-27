@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 
 
 class Player extends Component {
@@ -14,7 +14,8 @@ class Player extends Component {
         backgroundColor: this.props.color || "pink",
         width: radius * 2,
         height: radius * 2,
-        borderRadius: radius * 2 }} className="player" />
+        borderRadius: radius * 2 }} className="player">
+        </View>
     )
     }
 };
