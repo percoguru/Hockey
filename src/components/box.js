@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { View } from "react-native";
-import { array, object, string } from 'prop-types';
+import React, {Component} from 'react';
+import {View} from 'react-native';
+import {array, object, string} from 'prop-types';
 
 export default class Box extends Component {
   render() {
@@ -8,23 +8,23 @@ export default class Box extends Component {
     const height = this.props.size[1];
     const x = this.props.body.position.x - width / 2;
     const y = this.props.body.position.y - height / 2;
-    
+
     return (
       <View
         style={{
-            position: "absolute",
-            left: x,
-            top: y,
-            width: width,
-            height: height,
-            backgroundColor: this.props.color || "pink",
-          }}/>
+          left: x,
+          top: y,
+          width: width,
+          height: height,
+          backgroundColor: this.props.color || 'pink',
+        }}
+      />
     );
   }
 }
 
 Box.propTypes = {
-    size: array,
-    body: object, 
-    color: string
-}
+  size: array,
+  body: object,
+  color: string,
+};
